@@ -1,0 +1,15 @@
+.skip-link{
+  color:$white;
+  display:block;
+  text-align:center;
+  font-size:1rem;
+  text-decoration:underline;
+  height:3rem;
+  margin-top:-3rem;
+
+  &:focus{
+    background:#222;
+    color:$white;
+    margin-top:0px;
+  }
+} 

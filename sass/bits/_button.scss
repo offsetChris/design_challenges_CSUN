@@ -1,0 +1,27 @@
+.button, .button-primary{
+  text-decoration:none;
+  text-align:center;
+  background-color:$cobalt;
+  color:$white;
+  font-family:'source Sans Pro', Arial, Helvetica, sans-serif;
+  border:none;
+  display:inline-block;
+  padding:1rem 3rem;
+  font-size:2em;
+  letter-spacing:0.04rem;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:2px;
+  @include shadow();
+
+  &:hover, &:focus{
+    background-color:$cobalt-hover;
+    color:$white;
+  }
+  &-secondary{
+    @extend .button;
+    background-color:transparent;
+    color:$cobalt;
+    border:1px solid $cobalt;
+  }
+}

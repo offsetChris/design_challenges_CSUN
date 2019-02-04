@@ -1,0 +1,58 @@
+// Primary
+$base-blue: #3c485e;
+$cobalt:    #0e38b1;
+$yellow:    #f5d027;
+$white:     #fff;
+
+// Secondary
+$red:       #f0134c;
+$purple:    #663366;
+$green:     #71d645;
+$aqua:      #0bbcd6;
+
+// Greys
+$grey:      #f4f4f4; 
+$grey2:     #ddd;
+$grey3:     #EEF1F2;
+$grey4:     #e1e2e5;
+$grey5:     #ccc;
+$text-grey: #bfc3ce;
+
+// Modifiers
+$cobalt-hover:  #13317b;
+$base-blue-hover: #1c283e;
+
+// Typography
+$font-family: Arial, sans-serif;
+$fw-bold: 700;
+$text-color: #283142;
+
+// Patterns
+$grey-border:1px solid $grey2;
+
+
+// Break points
+$phone: 'screen and (max-width:800px)';
+
+
+// Mixins
+@mixin focus{
+  outline:3px dotted;
+  outline-offset:2px;
+  outline-color:$cobalt;
+  outline-color:-webkit-focus-ring-color;
+}
+
+@mixin shadow{
+  -webkit-box-shadow: 0 2px 4px rgba(40,49,66,0.12), 0 1px 16px rgba(40,49,66,0.02);
+    box-shadow: 0 2px 4px rgba(40,49,66,0.12), 0 1px 16px rgba(40,49,66,0.02);
+}
+
+@mixin focusline($size){
+  content: '';
+  width:$size;
+  height:.3rem;
+  display:block;
+  margin-bottom:.15rem;
+  background:$aqua;
+}

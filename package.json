@@ -1,0 +1,32 @@
+{
+  "name": "design_challenges_csun",
+  "version": "1.0.0",
+  "description": "Example code for 2019 CSUN presentation: robust, semantic solutions for modern design challenges.",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass --watch sass -o common"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/offsetChris/design_challenges_CSUN.git"
+  },
+  "keywords": [
+    "accessibility",
+    "CSUN",
+    "ux",
+    "challenges",
+    "front",
+    "end",
+    "development",
+    "a11y"
+  ],
+  "author": "Christina Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/offsetChris/design_challenges_CSUN/issues"
+  },
+  "homepage": "https://github.com/offsetChris/design_challenges_CSUN#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

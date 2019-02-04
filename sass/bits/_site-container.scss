@@ -1,0 +1,9 @@
+.site-container{
+  max-width:1300px;
+  margin:3rem auto;
+  padding:0px 1rem;
+
+  @media #{$phone}{
+    margin:1rem auto;
+  }
+}

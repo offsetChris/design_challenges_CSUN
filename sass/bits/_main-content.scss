@@ -1,0 +1,9 @@
+.main-content{
+  background:$white;
+  padding:1rem;
+  min-height:50vh;
+
+  &.site-container{
+    margin-top:0px;
+  }
+}
