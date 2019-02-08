@@ -4,13 +4,16 @@
 // Bits
 @import 'bits/basics';
 @import 'bits/site-container';
-@import 'bits/main-content';
+@import 'bits/site-card';
 @import 'bits/button';
+@import 'bits/textarea';
 
 // Pieces
 @import 'pieces/skiplink';
 @import 'pieces/main-nav';
+@import 'pieces/main-content';
+@import 'pieces/code';
+@import 'pieces/blog';
 
 // Whole
 @import 'whole/example-page';
-@import 'whole/blog';

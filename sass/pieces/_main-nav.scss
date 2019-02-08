@@ -8,6 +8,10 @@
       margin:1rem;
       position:relative;
 
+      a{
+        height:100%;
+      }
+
       &.is-active{
         @extend .button;
         background:$white;
@@ -34,8 +38,5 @@
         }
       }
     }
-  }
-  > a{
-    display:block;
   }
 }

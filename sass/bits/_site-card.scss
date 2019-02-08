@@ -1,0 +1,4 @@
+.site-card{
+  @include shadow(4px, 0.12);
+  position:relative;
+}

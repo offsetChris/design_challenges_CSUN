@@ -1,0 +1,98 @@
+.blog{
+  display:flex;
+  flex-direction:row;
+  
+
+  @media #{$phone}{
+    flex-direction:column;
+  }
+
+  a{
+    text-decoration:none;
+    display:block;
+    margin:10px;
+    border-bottom:5px solid $white;
+    padding-bottom:55px;
+    color:$base-blue;
+
+    &:hover, &:focus{
+      border-bottom:5px solid $blog-heading;
+      @include shadow(1px, 0.3);
+      
+      h2{
+        color:$blog-heading-hover;
+      }
+  
+      p{
+        color:$base-blue;
+      }
+    }
+  }
+
+  h2{
+    font-family: "Palatino Linotype", "Times New Roman", serif;
+    font-weight:normal;
+    color:$blog-heading;
+    margin:0px;
+  }
+
+  .icon-arrow-right{
+    position:absolute;
+    bottom:0px;
+    right:10px;
+    width:50px;
+    height:50px;
+
+    svg{
+      fill:$blog-action;
+      width:100%;
+      height:100%;
+    }
+  }
+
+
+  .blog_image{
+    width:100%;
+    order:-1;
+  }
+  .blog_header{
+    display:flex;
+    flex-direction:column;
+  }
+  .blog_headline{
+    order:1;
+    margin:0px 2rem;
+  }
+  .blog_category{
+    font-size:.7rem;
+    text-transform:uppercase;
+    font-weight:bold;
+    padding:1em 1.2em;
+    letter-spacing:.1em;
+    width:200px;
+    text-align:center;
+    align-self:flex-end;
+    margin-top:-1.2rem;
+    margin-right:10px;
+    background:#222;
+    color:$white;
+
+    &.winter{
+      color:$white;
+      background:$winter-category;
+    }
+    &.chickens{
+      color:$white;
+      background:$chicken-category;
+    }
+  }
+  .blog_date{
+    margin:1rem 2rem;
+    font-size:.8rem;
+    font-style:italic;
+  }
+  .blog_text{
+    color:$base-blue;
+    margin:1rem 2rem;
+  }
+}

@@ -22,6 +22,13 @@ $text-grey: #bfc3ce;
 $cobalt-hover:  #13317b;
 $base-blue-hover: #1c283e;
 
+// Blog special
+$blog-heading:    #205f94;
+$blog-heading-hover: #14334d;
+$blog-action:     #c08106;
+$winter-category: #003471;
+$chicken-category:#387712;
+
 // Typography
 $font-family: Arial, sans-serif;
 $fw-bold: 700;
@@ -37,15 +44,15 @@ $phone: 'screen and (max-width:800px)';
 
 // Mixins
 @mixin focus{
-  outline:3px dotted;
+  outline:2px dotted;
   outline-offset:2px;
   outline-color:$cobalt;
   outline-color:-webkit-focus-ring-color;
 }
 
-@mixin shadow{
-  -webkit-box-shadow: 0 2px 4px rgba(40,49,66,0.12), 0 1px 16px rgba(40,49,66,0.02);
-    box-shadow: 0 2px 4px rgba(40,49,66,0.12), 0 1px 16px rgba(40,49,66,0.02);
+@mixin shadow($distance, $opacity){
+  -webkit-box-shadow: 0 2px $distance rgba(40,49,66,$opacity), 0 1px 16px rgba(40,49,66,0.02);
+    box-shadow: 0 2px $distance rgba(40,49,66,$opacity), 0 1px 16px rgba(40,49,66,0.02);
 }
 
 @mixin focusline($size){

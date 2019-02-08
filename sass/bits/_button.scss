@@ -12,7 +12,7 @@
   font-weight:bold;
   cursor:pointer;
   border-radius:2px;
-  @include shadow();
+  @include shadow(4px, 0.12);
 
   &:hover, &:focus{
     background-color:$cobalt-hover;

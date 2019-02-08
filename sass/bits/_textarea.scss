@@ -1,0 +1,11 @@
+textarea{
+  font-family:$font-family;
+  padding:1rem;
+  min-width:320px;
+  min-height:5rem;
+
+  &:disabled{
+    background:#fff;
+    border-color:$grey2
+  }
+}
