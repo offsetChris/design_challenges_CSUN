@@ -1,0 +1,25 @@
+.search{
+  position:relative;
+  input{
+    padding-right:40px;
+    min-width:250px;
+  }
+  button{
+    background:transparent;
+    position:absolute;
+    top:0px;
+    right:0px;
+    box-shadow:none;
+    color:$search-blue;
+    height:40px;
+    width:40px;
+    text-indent:-999em;
+    font-size:0px;
+    line-height:0px;
+    padding:0px;
+
+    &:hover, &:focus{
+      background:$grey2;
+    }
+  }
+}

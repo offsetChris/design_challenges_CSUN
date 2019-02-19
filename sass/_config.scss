@@ -17,7 +17,7 @@ $grey3:     #EEF1F2;
 $grey4:     #e1e2e5;
 $grey5:     #ccc;
 $text-grey: #bfc3ce;
-
+$grey-dark: #454545;
 // Modifiers
 $cobalt-hover:  #13317b;
 $base-blue-hover: #1c283e;
@@ -29,13 +29,16 @@ $blog-action:     #c08106;
 $winter-category: #003471;
 $chicken-category:#387712;
 
+// Search special
+$search-blue:#2290c9;
+
 // Typography
 $font-family: Arial, sans-serif;
 $fw-bold: 700;
 $text-color: #283142;
 
 // Patterns
-$grey-border:1px solid $grey2;
+$grey-border:1px solid #999;
 
 
 // Break points

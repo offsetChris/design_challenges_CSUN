@@ -41,7 +41,7 @@ h1 {
     margin-bottom: .15rem;
     background: #0bbcd6; }
 
-.sr-only {
+.visually-hidden {
   position: absolute;
   left: -9999em;
   line-height: 0px;
@@ -62,7 +62,7 @@ h1 {
   box-shadow: 0 2px 4px rgba(40, 49, 66, 0.12), 0 1px 16px rgba(40, 49, 66, 0.02);
   position: relative; }
 
-.button, .button-secondary, .button-primary-secondary, .main-nav ul li.is-active, .button-primary {
+.button, .button-secondary, .button-primary-secondary, button-secondary, .main-nav ul li.is-active, .button-primary, button {
   text-decoration: none;
   text-align: center;
   background-color: #0e38b1;
@@ -70,18 +70,18 @@ h1 {
   font-family: 'source Sans Pro', Arial, Helvetica, sans-serif;
   border: none;
   display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 2em;
+  padding: .75rem 1rem;
+  font-size: 1em;
   letter-spacing: 0.04rem;
   font-weight: bold;
   cursor: pointer;
   border-radius: 2px;
   -webkit-box-shadow: 0 2px 4px rgba(40, 49, 66, 0.12), 0 1px 16px rgba(40, 49, 66, 0.02);
   box-shadow: 0 2px 4px rgba(40, 49, 66, 0.12), 0 1px 16px rgba(40, 49, 66, 0.02); }
-  .button:hover, .button-secondary:hover, .button-primary-secondary:hover, .main-nav ul li.is-active:hover, .button:focus, .button-secondary:focus, .button-primary-secondary:focus, .main-nav ul li.is-active:focus, .button-primary:hover, .button-primary:focus {
+  .button:hover, .button-secondary:hover, .button-primary-secondary:hover, button-secondary:hover, .main-nav ul li.is-active:hover, .button:focus, .button-secondary:focus, .button-primary-secondary:focus, button-secondary:focus, .main-nav ul li.is-active:focus, .button-primary:hover, .button-primary:focus, button:hover, button:focus {
     background-color: #13317b;
     color: #fff; }
-  .button-secondary, .button-primary-secondary {
+  .button-secondary, .button-primary-secondary, button-secondary {
     background-color: transparent;
     color: #0e38b1;
     border: 1px solid #0e38b1; }
@@ -95,6 +95,21 @@ textarea {
     background: #fff;
     border-color: #ddd; }
 
+input {
+  padding: 10px 15px;
+  background: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  border-radius: 2px;
+  border: 1px solid #999; }
+
+.fa {
+  display: block;
+  height: 40px;
+  width: 40px; }
+  .fa.fa-search {
+    background: url("/common/images/search.png") center center no-repeat; }
+
 .skip-link {
   color: #fff;
   display: block;
@@ -107,6 +122,10 @@ textarea {
     background: #222;
     color: #fff;
     margin-top: 0px; }
+
+.main-nav .button-primary {
+  font-size: 2rem;
+  padding: 1rem 3rem; }
 
 .main-nav ul {
   list-style: none;
@@ -223,6 +242,27 @@ code {
     color: #3c485e;
     margin: 1rem 2rem; }
 
+.search {
+  position: relative; }
+  .search input {
+    padding-right: 40px;
+    min-width: 250px; }
+  .search button {
+    background: transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    box-shadow: none;
+    color: #2290c9;
+    height: 40px;
+    width: 40px;
+    text-indent: -999em;
+    font-size: 0px;
+    line-height: 0px;
+    padding: 0px; }
+    .search button:hover, .search button:focus {
+      background: #ddd; }
+
 .example-page .main-nav {
   margin: 0px;
   background: #ccc; }
@@ -235,3 +275,26 @@ code {
         padding: 1rem;
         font-size: 1rem;
         border-radius: 0px; }
+
+.search-example header {
+  display: flex;
+  justify-content: space-between;
+  background: #454545;
+  color: #fff;
+  padding: 2rem 3rem; }
+  .search-example header h1 {
+    color: #fff;
+    font-weight: bold;
+    display: inline-block; }
+    .search-example header h1:before {
+      content: none; }
+  .search-example header .a_company_logo {
+    background: url("/common/images/searchExample_logo.png") 0 0 no-repeat;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    display: inline-block;
+    font-size: 0px;
+    line-height: 0px;
+    text-indent: -999em;
+    vertical-align: top; }

@@ -1,0 +1,8 @@
+.fa{
+  display:block;
+  height:40px;
+  width:40px;
+  &.fa-search{
+    background:url('/common/images/search.png') center center no-repeat;
+  }
+}

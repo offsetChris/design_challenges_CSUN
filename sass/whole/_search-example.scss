@@ -1,0 +1,30 @@
+.search-example{
+  header{
+    display:flex;
+    justify-content:space-between;
+    background:$grey-dark;
+    color:$white;
+    padding:2rem 3rem;
+    h1{
+      color:$white;
+      font-weight:bold;
+      display:inline-block;
+      &:before{
+        content:none;
+      }
+
+    }
+
+    .a_company_logo{
+      background:url('/common/images/searchExample_logo.png') 0 0 no-repeat;
+      width:100px;
+      height:100px;
+      background-size:contain;
+      display:inline-block;
+      font-size:0px;
+      line-height:0px;
+      text-indent:-999em;
+      vertical-align:top;
+    }
+  }
+}

@@ -7,6 +7,8 @@
 @import 'bits/site-card';
 @import 'bits/button';
 @import 'bits/textarea';
+@import 'bits/input';
+@import 'bits/icons';
 
 // Pieces
 @import 'pieces/skiplink';
@@ -14,6 +16,8 @@
 @import 'pieces/main-content';
 @import 'pieces/code';
 @import 'pieces/blog';
+@import 'pieces/search';
 
 // Whole
 @import 'whole/example-page';
+@import 'whole/search-example';

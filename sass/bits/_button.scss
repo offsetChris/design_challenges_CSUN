@@ -1,4 +1,4 @@
-.button, .button-primary{
+.button, .button-primary, button{
   text-decoration:none;
   text-align:center;
   background-color:$cobalt;
@@ -6,8 +6,8 @@
   font-family:'source Sans Pro', Arial, Helvetica, sans-serif;
   border:none;
   display:inline-block;
-  padding:1rem 3rem;
-  font-size:2em;
+  padding:.75rem 1rem;
+  font-size:1em;
   letter-spacing:0.04rem;
   font-weight:bold;
   cursor:pointer;
