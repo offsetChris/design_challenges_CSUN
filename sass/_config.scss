@@ -47,7 +47,7 @@ $phone: 'screen and (max-width:800px)';
 
 // Mixins
 @mixin focus{
-  outline:2px dotted;
+  outline:2px dashed;
   outline-offset:2px;
   outline-color:$cobalt;
   outline-color:-webkit-focus-ring-color;

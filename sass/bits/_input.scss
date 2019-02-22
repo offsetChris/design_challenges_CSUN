@@ -6,5 +6,7 @@ input{
   border-radius:2px;
   border:$grey-border;
 
-  
+  &:focus{
+    @include focus;
+  }
 }

@@ -18,7 +18,7 @@ a {
   a:hover, a:focus {
     color: #000; }
   a:focus {
-    outline: 2px dotted;
+    outline: 2px dashed;
     outline-offset: 2px;
     outline-color: #0e38b1;
     outline-color: -webkit-focus-ring-color; }
@@ -102,13 +102,19 @@ input {
   font-family: Arial, sans-serif;
   border-radius: 2px;
   border: 1px solid #999; }
+  input:focus {
+    outline: 2px dashed;
+    outline-offset: 2px;
+    outline-color: #0e38b1;
+    outline-color: -webkit-focus-ring-color; }
 
 .fa {
   display: block;
-  height: 40px;
-  width: 40px; }
+  height: 1.5rem;
+  width: 1.5rem; }
   .fa.fa-search {
-    background: url("/common/images/search.png") center center no-repeat; }
+    background: url("/common/images/search.png") 0 0 no-repeat;
+    background-size: contain; }
 
 .skip-link {
   color: #fff;
@@ -243,10 +249,12 @@ code {
     margin: 1rem 2rem; }
 
 .search {
-  position: relative; }
+  position: relative;
+  display: block; }
   .search input {
-    padding-right: 40px;
-    min-width: 250px; }
+    padding-right: 4rem;
+    min-width: 350px;
+    font-size: 2rem; }
   .search button {
     background: transparent;
     position: absolute;
@@ -254,14 +262,19 @@ code {
     right: 0px;
     box-shadow: none;
     color: #2290c9;
-    height: 40px;
-    width: 40px;
+    height: 85%;
     text-indent: -999em;
     font-size: 0px;
     line-height: 0px;
-    padding: 0px; }
+    padding: 0px 10px;
+    margin: 5px; }
     .search button:hover, .search button:focus {
-      background: #ddd; }
+      background: #EEF1F2; }
+    .search button:focus {
+      outline: 2px dashed;
+      outline-offset: 2px;
+      outline-color: #0e38b1;
+      outline-color: -webkit-focus-ring-color; }
 
 .example-page .main-nav {
   margin: 0px;

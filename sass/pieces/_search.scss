@@ -1,8 +1,11 @@
 .search{
   position:relative;
+  display:block;
+
   input{
-    padding-right:40px;
-    min-width:250px;
+    padding-right:4rem;
+    min-width:350px;
+    font-size:2rem;
   }
   button{
     background:transparent;
@@ -11,15 +14,18 @@
     right:0px;
     box-shadow:none;
     color:$search-blue;
-    height:40px;
-    width:40px;
+    height:85%;
     text-indent:-999em;
     font-size:0px;
     line-height:0px;
-    padding:0px;
+    padding:0px 10px;
+    margin:5px;
 
     &:hover, &:focus{
-      background:$grey2;
+      background:$grey3;
+    }
+    &:focus{
+      @include focus;
     }
   }
 }

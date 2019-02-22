@@ -1,6 +1,9 @@
 # design_challenges_CSUN
 Repository of example code from CSUN presentation: Robust, semantic solutions for modern design challenges.
 
+Demo: https://offsetchris.github.io/design_challenges_CSUN/
+
+
 ## Examples repository or the 2019 CSUN presentation: Robust, Semantic Solutions to Modern Design Challenges
 
 
