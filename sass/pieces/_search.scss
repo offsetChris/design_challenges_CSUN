@@ -1,31 +1,7 @@
 .search{
   position:relative;
   display:block;
+  min-height:400px;
 
-  input{
-    padding-right:4rem;
-    min-width:350px;
-    font-size:2rem;
-  }
-  button{
-    background:transparent;
-    position:absolute;
-    top:0px;
-    right:0px;
-    box-shadow:none;
-    color:$search-blue;
-    height:85%;
-    text-indent:-999em;
-    font-size:0px;
-    line-height:0px;
-    padding:0px 10px;
-    margin:5px;
-
-    &:hover, &:focus{
-      background:$grey3;
-    }
-    &:focus{
-      @include focus;
-    }
-  }
+ 
 }

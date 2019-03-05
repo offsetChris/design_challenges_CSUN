@@ -14,10 +14,15 @@
     border-bottom:5px solid $white;
     padding-bottom:55px;
     color:$base-blue;
+    border-top:1px solid $grey;
+    border-left:1px solid $grey;
+    border-right:1px solid $grey;
 
     &:hover, &:focus{
       border-bottom:5px solid $blog-heading;
-      @include shadow(1px, 0.3);
+      border-top:1px solid $grey-dark;
+      border-left:1px solid $grey-dark;
+      border-right:1px solid $grey-dark;
       
       h2{
         color:$blog-heading-hover;
@@ -49,7 +54,6 @@
       height:100%;
     }
   }
-
 
   .blog_image{
     width:100%;
