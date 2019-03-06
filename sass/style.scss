@@ -2,13 +2,16 @@
 @import 'config';
 
 // Bits
+@import 'bits/logo';
 @import 'bits/basics';
 @import 'bits/site-container';
 @import 'bits/site-card';
+@import 'bits/columns';
 @import 'bits/button';
 // @import 'bits/textarea';
 // @import 'bits/input';
 @import 'bits/icons';
+@import 'bits/footer';
 
 // Pieces
 @import 'pieces/skiplink';
@@ -21,3 +24,4 @@
 // Whole
 @import 'whole/example-page';
 @import 'whole/search-example';
+@import 'whole/cart-example';

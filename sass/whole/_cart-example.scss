@@ -1,0 +1,272 @@
+.cart_example{
+  font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+  min-height:50vh;
+  margin-bottom:80px;
+
+  .progress{
+    max-width:80%;
+    margin:20px auto;
+    font-size:1.5rem;
+    position:relative;
+
+    ol,ul{
+      margin:0px;
+      padding:0px;
+      list-style:none;
+    }
+
+    &-indicators, &-labels{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+
+      @media #{$phone}{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+      }
+    }
+
+    &-indicators{
+      z-index:2;
+      position:relative;
+      > span{
+        margin:0px 4rem;
+      }
+    }
+    &-labels{
+      li{
+        margin-top:10px;
+        text-align:center;
+        flex-shrink:0;
+      }
+    }
+
+    button{
+      width:10rem;
+      -webkit-appearance:none;
+      border:none;
+      background:none;
+      cursor:pointer;
+      font-size:1rem;
+      font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+      padding:.5rem 1rem;
+      border-radius:10px;
+      border:1px solid transparent;
+
+      &:hover, &:focus{
+        background:$grey2;
+      }
+
+      &.is-complete{
+        // background:$green;
+        border:1px solid #adadad;
+        color:$green;
+        // text-decoration:underline;
+
+        &:hover, &:focus{
+          color:$green;
+          border:1px solid $green;
+          text-decoration:none;
+          background:#eff3ed;
+        }
+      }
+
+      &.is-inprogress{
+        // border:1px solid $purple;
+        color:$green;
+        // border-color:$green;
+        cursor:default;
+
+        &:hover, &:focus{
+          background:none;
+        }
+      }
+
+      &.is-disabled{
+        color:#777;
+        cursor:default;
+
+        &:hover, &:focus{
+          background:none;
+        }
+      }
+
+      // at column breakpoint use aria labels to append check icon to button instead of progress meter
+    }
+
+    &_step{
+      width:2rem;
+      height:2rem;
+      font-size:.8em;
+      text-align:center;
+      line-height:2rem;
+      border:1px solid #333;
+      background:$white;
+      border-radius:50%;
+      flex-shrink:0;
+
+      @media #{$phone}{
+        display:none; // only if this has no crucial screen reader information.
+      }
+
+      &.is-complete{
+        border-color:$green;
+        background-color:$green;
+        &:before{
+          font-family:$icon-font;
+          content: "\e902";
+          color:$white;
+        }
+      }
+
+      &.is-inprogress{
+        border-color:$green;
+        // .sr-only{
+        //   clip:auto;
+        //   position:relative;
+        //   left:auto;
+        //   height:auto;
+        //   width:auto;
+        //   line-height:normal;
+        // }
+      }
+
+      &.is-disabled{
+        border-color:#bdbdbd;
+        background:$grey;
+
+        // .sr-only{
+        //   clip:auto;
+        //   position:relative;
+        //   left:auto;
+        //   height:auto;
+        //   width:auto;
+        //   line-height:normal;
+        // }
+      }
+    }
+
+    &_bar{
+      background:$grey;
+      height:.8rem;
+      margin-top:.6rem;
+      position:absolute;
+      top:0px;
+      left:0px;
+      right:0px;
+      z-index:1;
+      margin-left:4rem;
+      margin-right:4rem;
+      border:1px solid #d8d8d8;
+      border-radius:5px;
+
+      @media #{$phone}{
+        display:none; // only if this has no crucial screen reader information.
+      }
+
+      .progress_fill{
+        border-bottom-left-radius:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:0px;
+        border-bottom-right-radius:0px;
+        height:100%;
+        padding:0px 2rem;
+        background:$green;
+        box-sizing:content-box;
+      }
+
+    }
+
+    &_content{
+      .form-item{
+        display: block;
+        position:relative;
+        margin:10px;
+
+        label{
+          display:block;
+          font-size:.8em;
+          font-weight:400;
+        }
+        input{
+          font-size:1rem;
+          padding:.5rem;
+          font-family:'Quicksand', Helvetica, Arial, sans-serif;
+          min-width:350px;
+        }
+      }
+
+      .product_summary{
+        margin-left:auto;
+        padding:20px;
+        background:$grey;
+        border:1px solid $grey2;
+        min-width:300px;
+        width:50%;
+        margin-top:20px;
+        font-size:.8em;
+        
+        ol{
+          li{
+            margin:20px 0px;
+          }
+        }
+  
+        @media #{$phone}{
+          width:100%;
+          margin-left:0px;
+          
+        }
+
+        &_total{
+          font-size:.8em;
+          margin:30px 0px;
+          padding:20px;
+          text-align:right;
+          border-top:1px solid #ccc;
+          h4{
+            margin:0px;
+          }
+        }
+      }
+    }
+    
+  }
+
+  .product{
+    display:flex;
+  
+    img{
+      width:60px;
+      height:60px;
+      background:$grey2;
+      margin-right:10px;
+    }
+
+    &_brand{
+      font-size:.7em;
+    }
+    &_name{
+
+    }
+    &_details{
+      > span{
+        display:block;
+      }
+    }
+    .product_price{
+      margin-left:auto;
+      .price{
+        font-weight:400;
+        margin-left:10px;
+        &.strike-through{
+          font-weight:300;
+        }
+      }
+    } 
+  }
+  
+
+
+}

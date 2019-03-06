@@ -1,3 +1,14 @@
+.si-logo {
+  display: block; }
+  .si-logo svg {
+    display: block;
+    position: relative; }
+  footer .si-logo {
+    width: 400px;
+    margin: 3rem; }
+    footer .si-logo svg {
+      fill: #3c485e; }
+
 * {
   box-sizing: border-box; }
 
@@ -49,6 +60,9 @@ h1 {
   height: 1px;
   clip: rect(0, 0, 0, 0); }
 
+.strike-through {
+  text-decoration: line-through; }
+
 .site-container {
   max-width: 1300px;
   margin: 3rem auto;
@@ -61,6 +75,15 @@ h1 {
   -webkit-box-shadow: 0 2px 4px rgba(40, 49, 66, 0.12), 0 1px 16px rgba(40, 49, 66, 0.02);
   box-shadow: 0 2px 4px rgba(40, 49, 66, 0.12), 0 1px 16px rgba(40, 49, 66, 0.02);
   position: relative; }
+
+.columns, .columns--equal {
+  display: flex;
+  flex-direction: row; }
+  .columns--equal > div {
+    flex-basis: 50%; }
+  @media screen and (max-width: 800px) {
+    .columns, .columns--equal {
+      flex-direction: column; } }
 
 .button, .button-secondary, .button-primary-secondary, .button-primary {
   text-decoration: none;
@@ -88,8 +111,8 @@ h1 {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?jozko3");
-  src: url("fonts/icomoon.eot?jozko3#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?jozko3") format("truetype"), url("fonts/icomoon.woff?jozko3") format("woff"), url("fonts/icomoon.svg?jozko3#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?rnkjya");
+  src: url("fonts/icomoon.eot?rnkjya#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?rnkjya") format("truetype"), url("fonts/icomoon.woff?rnkjya") format("woff"), url("fonts/icomoon.svg?rnkjya#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -109,6 +132,9 @@ h1 {
 .icon-arrow-right:before {
   content: "\e900"; }
 
+.icon-check:before {
+  content: "\e902"; }
+
 .icon-search1:before {
   content: "\e901"; }
 
@@ -120,6 +146,9 @@ h1 {
 
 .icon-arrow-right2:before {
   content: "\ea3c"; }
+
+footer {
+  display: flex; }
 
 .skip-link {
   color: #fff;
@@ -159,7 +188,7 @@ h1 {
   position: relative; }
   .search-example header {
     background-image: url("");
-    background: #ca650f;
+    background: #b75d11;
     color: #fff;
     padding: 2rem 3rem;
     min-height: 400px;
@@ -224,7 +253,7 @@ h1 {
         background: #fff;
         outline: none; }
         .search-example header button:hover .icon-search1, .search-example header button:focus .icon-search1 {
-          color: #ca650f; }
+          color: #b75d11; }
         .search-example header button:hover ~ label, .search-example header button:focus ~ label {
           line-height: normal;
           height: auto;
@@ -245,3 +274,170 @@ h1 {
       @media screen and (max-width: 800px) {
         .search-example header .icon-search1 {
           font-size: 1rem; } }
+
+.cart_example {
+  font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+  min-height: 50vh;
+  margin-bottom: 80px; }
+  .cart_example .progress {
+    max-width: 80%;
+    margin: 20px auto;
+    font-size: 1.5rem;
+    position: relative; }
+    .cart_example .progress ol, .cart_example .progress ul {
+      margin: 0px;
+      padding: 0px;
+      list-style: none; }
+    .cart_example .progress-indicators, .cart_example .progress-labels {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      @media screen and (max-width: 800px) {
+        .cart_example .progress-indicators, .cart_example .progress-labels {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; } }
+    .cart_example .progress-indicators {
+      z-index: 2;
+      position: relative; }
+      .cart_example .progress-indicators > span {
+        margin: 0px 4rem; }
+    .cart_example .progress-labels li {
+      margin-top: 10px;
+      text-align: center;
+      flex-shrink: 0; }
+    .cart_example .progress button {
+      width: 10rem;
+      -webkit-appearance: none;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+      padding: .5rem 1rem;
+      border-radius: 10px;
+      border: 1px solid transparent; }
+      .cart_example .progress button:hover, .cart_example .progress button:focus {
+        background: #ddd; }
+      .cart_example .progress button.is-complete {
+        border: 1px solid #adadad;
+        color: #2e8008; }
+        .cart_example .progress button.is-complete:hover, .cart_example .progress button.is-complete:focus {
+          color: #2e8008;
+          border: 1px solid #2e8008;
+          text-decoration: none;
+          background: #eff3ed; }
+      .cart_example .progress button.is-inprogress {
+        color: #2e8008;
+        cursor: default; }
+        .cart_example .progress button.is-inprogress:hover, .cart_example .progress button.is-inprogress:focus {
+          background: none; }
+      .cart_example .progress button.is-disabled {
+        color: #777;
+        cursor: default; }
+        .cart_example .progress button.is-disabled:hover, .cart_example .progress button.is-disabled:focus {
+          background: none; }
+    .cart_example .progress_step {
+      width: 2rem;
+      height: 2rem;
+      font-size: .8em;
+      text-align: center;
+      line-height: 2rem;
+      border: 1px solid #333;
+      background: #fff;
+      border-radius: 50%;
+      flex-shrink: 0; }
+      @media screen and (max-width: 800px) {
+        .cart_example .progress_step {
+          display: none; } }
+      .cart_example .progress_step.is-complete {
+        border-color: #2e8008;
+        background-color: #2e8008; }
+        .cart_example .progress_step.is-complete:before {
+          font-family: "icomoon" !important;
+          content: "\e902";
+          color: #fff; }
+      .cart_example .progress_step.is-inprogress {
+        border-color: #2e8008; }
+      .cart_example .progress_step.is-disabled {
+        border-color: #bdbdbd;
+        background: #f4f4f4; }
+    .cart_example .progress_bar {
+      background: #f4f4f4;
+      height: .8rem;
+      margin-top: .6rem;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 1;
+      margin-left: 4rem;
+      margin-right: 4rem;
+      border: 1px solid #d8d8d8;
+      border-radius: 5px; }
+      @media screen and (max-width: 800px) {
+        .cart_example .progress_bar {
+          display: none; } }
+      .cart_example .progress_bar .progress_fill {
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        height: 100%;
+        padding: 0px 2rem;
+        background: #2e8008;
+        box-sizing: content-box; }
+    .cart_example .progress_content .form-item {
+      display: block;
+      position: relative;
+      margin: 10px; }
+      .cart_example .progress_content .form-item label {
+        display: block;
+        font-size: .8em;
+        font-weight: 400; }
+      .cart_example .progress_content .form-item input {
+        font-size: 1rem;
+        padding: .5rem;
+        font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+        min-width: 350px; }
+    .cart_example .progress_content .product_summary {
+      margin-left: auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      min-width: 300px;
+      width: 50%;
+      margin-top: 20px;
+      font-size: .8em; }
+      .cart_example .progress_content .product_summary ol li {
+        margin: 20px 0px; }
+      @media screen and (max-width: 800px) {
+        .cart_example .progress_content .product_summary {
+          width: 100%;
+          margin-left: 0px; } }
+      .cart_example .progress_content .product_summary_total {
+        font-size: .8em;
+        margin: 30px 0px;
+        padding: 20px;
+        text-align: right;
+        border-top: 1px solid #ccc; }
+        .cart_example .progress_content .product_summary_total h4 {
+          margin: 0px; }
+  .cart_example .product {
+    display: flex; }
+    .cart_example .product img {
+      width: 60px;
+      height: 60px;
+      background: #ddd;
+      margin-right: 10px; }
+    .cart_example .product_brand {
+      font-size: .7em; }
+    .cart_example .product_details > span {
+      display: block; }
+    .cart_example .product .product_price {
+      margin-left: auto; }
+      .cart_example .product .product_price .price {
+        font-weight: 400;
+        margin-left: 10px; }
+        .cart_example .product .product_price .price.strike-through {
+          font-weight: 300; }

@@ -1,0 +1,15 @@
+.si-logo{
+  display:block;
+
+  svg{
+    display:block;
+    position:relative;
+  }
+  footer &{
+    width:400px;
+    margin:3rem;
+    svg{
+      fill:$base-blue;
+    }
+  }
+}

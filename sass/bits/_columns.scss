@@ -1,0 +1,15 @@
+.columns{
+  display:flex;
+  flex-direction:row;
+
+  &--equal{
+    @extend .columns;
+    > div{
+      flex-basis:50%;
+    }
+  }
+
+  @media #{$phone}{
+    flex-direction:column;
+  }
+}
