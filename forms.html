@@ -18,7 +18,71 @@
 
     <main class="site-container main-content" id="mainContent">
       <div class="form">
+        <h2>Create an Account</h2>
+        <form>
+          <div class="form-item">
+            <label for="firstName">First Name</label>
+            <input name="firstName" id="firstName" aria-required="true" aria-invalid="false" placeholder="Enter your first name">
+          </div>
 
+          <div class="form-item">
+            <label for="lastName">Last Name</label>
+            <input name="lastName" id="lastName" aria-required="true" aria-invalid="false" placeholder="Enter your last name">
+          </div>
+
+          <div class="form-item">
+            <label for="email">Email</label>
+            <input name="email" id="email" aria-required="true" aria-invalid="false" placeholder="Enter your email">
+          </div>
+
+          <div class="form-item">
+            <fieldset aria-required="true" aria-invalid="false">
+              <legend>What product are you interested in?</legend>
+              <label>
+                <input type="checkbox" name="products" value="product1">
+                Product 1
+              </label>
+              <label>
+                <input type="checkbox" name="products" value="product2">
+                Product 2
+              </label>
+              <label>
+                <input type="checkbox" name="products" value="product3">
+                Product 3 
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-item">
+            <fieldset>
+              <legend>Do you want to be on our mailing list?</legend>
+
+              <input type="radio" name="mail" id="mail1" value="yes">
+              <label for="mail1">Yes</label>
+              
+              <input type="radio" name="mail" id="mail2" value="no">
+              <label for="mail2">No</label>
+              
+              <input type="radio" name="mail" id="mail3" value="never">
+              <label for="mail3">Never</label>
+              
+              <input type="radio" name="mail" id="mail4" value="goaway">
+              <label for="mail4">Go Away</label>
+            </fieldset>
+          </div>
+          <input type="submit" value="Create Account">
+        </form>
+
+        <script>
+          var form = document.getElementsByTagName('form')[0];
+
+          form.addEventListener('submit', function(e) {
+            console.log('submitClicked');
+
+            // until if/else statement checking for valid and required
+            e.preventDefault();
+          });
+        </script>
       </div>
 
       
