@@ -170,6 +170,82 @@ footer {
   .main-content.site-container {
     margin-top: 0px; }
 
+.blog {
+  display: flex;
+  flex-direction: row; }
+  @media screen and (max-width: 800px) {
+    .blog {
+      flex-direction: column; } }
+  .blog a {
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    border-bottom: 5px solid #fff;
+    padding-bottom: 55px;
+    color: #3c485e;
+    border-top: 1px solid #f4f4f4;
+    border-left: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4; }
+    .blog a:hover, .blog a:focus {
+      border-bottom: 5px solid #205f94;
+      border-top: 1px solid #454545;
+      border-left: 1px solid #454545;
+      border-right: 1px solid #454545; }
+      .blog a:hover h2, .blog a:focus h2 {
+        color: #14334d; }
+      .blog a:hover p, .blog a:focus p {
+        color: #3c485e; }
+  .blog h2 {
+    font-family: "Palatino Linotype", "Times New Roman", serif;
+    font-weight: normal;
+    color: #205f94;
+    margin: 0px; }
+  .blog .arrow-right {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    width: 50px;
+    height: 50px; }
+    .blog .arrow-right svg {
+      fill: #c08106;
+      width: 100%;
+      height: 100%; }
+  .blog .blog_image {
+    width: 100%;
+    order: -1; }
+  .blog .blog_header {
+    display: flex;
+    flex-direction: column; }
+  .blog .blog_headline {
+    order: 1;
+    margin: 0px 2rem; }
+  .blog .blog_category {
+    font-size: .7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1em 1.2em;
+    letter-spacing: .1em;
+    width: 200px;
+    text-align: center;
+    align-self: flex-end;
+    margin-top: -1.2rem;
+    margin-right: 10px;
+    background: #222;
+    color: #fff; }
+    .blog .blog_category.winter {
+      color: #fff;
+      background: #003471; }
+    .blog .blog_category.chickens {
+      color: #fff;
+      background: #387712; }
+  .blog .blog_date {
+    margin: 1rem 2rem;
+    font-size: .8rem;
+    font-style: italic; }
+  .blog .blog_text {
+    color: #3c485e;
+    margin: 1rem 2rem; }
+
 .example-page .main-nav {
   margin: 0px;
   background: #ccc; }
@@ -307,7 +383,7 @@ footer {
       text-align: center;
       flex-shrink: 0; }
     .cart_example .progress button {
-      width: 10rem;
+      width: 11rem;
       -webkit-appearance: none;
       border: none;
       background: none;
@@ -317,23 +393,22 @@ footer {
       padding: .5rem 1rem;
       border-radius: 10px;
       border: 1px solid transparent; }
-      .cart_example .progress button:hover, .cart_example .progress button:focus {
-        background: #ddd; }
       .cart_example .progress button.is-complete {
         border: 1px solid #adadad;
-        color: #2e8008; }
+        color: #205d03; }
         .cart_example .progress button.is-complete:hover, .cart_example .progress button.is-complete:focus {
-          color: #2e8008;
-          border: 1px solid #2e8008;
+          color: #205d03;
+          border: 1px solid #3f9a17;
           text-decoration: none;
           background: #eff3ed; }
       .cart_example .progress button.is-inprogress {
-        color: #2e8008;
+        color: #205d03;
+        border: 1px solid #3f9a17;
+        text-decoration: none;
+        background: #eff3ed;
         cursor: default; }
-        .cart_example .progress button.is-inprogress:hover, .cart_example .progress button.is-inprogress:focus {
-          background: none; }
       .cart_example .progress button.is-disabled {
-        color: #777;
+        color: #505050;
         cursor: default; }
         .cart_example .progress button.is-disabled:hover, .cart_example .progress button.is-disabled:focus {
           background: none; }
@@ -351,14 +426,14 @@ footer {
         .cart_example .progress_step {
           display: none; } }
       .cart_example .progress_step.is-complete {
-        border-color: #2e8008;
-        background-color: #2e8008; }
+        border-color: #3f9a17;
+        background-color: #3f9a17; }
         .cart_example .progress_step.is-complete:before {
           font-family: "icomoon" !important;
           content: "\e902";
           color: #fff; }
       .cart_example .progress_step.is-inprogress {
-        border-color: #2e8008; }
+        border-color: #3f9a17; }
       .cart_example .progress_step.is-disabled {
         border-color: #bdbdbd;
         background: #f4f4f4; }
@@ -385,7 +460,7 @@ footer {
         border-bottom-right-radius: 0px;
         height: 100%;
         padding: 0px 2rem;
-        background: #2e8008;
+        background: #3f9a17;
         box-sizing: content-box; }
     .cart_example .progress_content .form-item {
       display: block;
@@ -400,6 +475,10 @@ footer {
         padding: .5rem;
         font-family: 'Quicksand', Helvetica, Arial, sans-serif;
         min-width: 350px; }
+        @media screen and (max-width: 800px) {
+          .cart_example .progress_content .form-item input {
+            min-width: auto;
+            width: 100%; } }
     .cart_example .progress_content .product_summary {
       margin-left: auto;
       padding: 20px;
