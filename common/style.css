@@ -155,7 +155,8 @@ h1 {
         border-radius: 0px; }
 
 .search-example {
-  font-family: 'Quicksand', Helvetica, Arial, sans-serif; }
+  font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+  position: relative; }
   .search-example header {
     background-image: url("");
     background: #ca650f;
@@ -167,7 +168,13 @@ h1 {
     align-items: center; }
     .search-example header h2 {
       font-size: 3rem;
-      font-weight: 300; }
+      font-weight: 300;
+      text-align: center; }
+    .search-example header .search {
+      position: relative; }
+    .search-example header label {
+      font-size: 1rem;
+      width: 4.2rem; }
     .search-example header input {
       transition: border .25s;
       font-family: 'Quicksand', Helvetica, Arial, sans-serif;
@@ -181,17 +188,33 @@ h1 {
       color: #fff;
       border-bottom: 2px solid #fff;
       width: 400px;
-      padding: 20px 100px 20px 20px; }
+      padding: 20px 4rem 20px 20px; }
       .search-example header input::placeholder {
+        color: #fff; }
+      .search-example header input::-ms-input-placeholder {
         color: #fff; }
       .search-example header input:focus {
         border-bottom-width: 10px;
         outline: 1px solid;
         outline-offset: -1px;
         outline-color: rgba(255, 255, 255, 0.5); }
+        .search-example header input:focus ~ label {
+          line-height: normal;
+          height: auto;
+          clip: auto;
+          left: -4.2rem;
+          top: 1.5rem; }
+          @media screen and (max-width: 800px) {
+            .search-example header input:focus ~ label {
+              top: -1.5rem;
+              left: 5px; } }
+      @media screen and (max-width: 800px) {
+        .search-example header input {
+          width: 230px;
+          padding-right: 2.5rem; } }
     .search-example header button {
       margin-left: -4rem;
-      padding: 1rem;
+      padding: 1em;
       background: none;
       cursor: pointer;
       border: none;
@@ -202,6 +225,23 @@ h1 {
         outline: none; }
         .search-example header button:hover .icon-search1, .search-example header button:focus .icon-search1 {
           color: #ca650f; }
+        .search-example header button:hover ~ label, .search-example header button:focus ~ label {
+          line-height: normal;
+          height: auto;
+          clip: auto;
+          left: -4.2rem;
+          top: 1.5rem; }
+          @media screen and (max-width: 800px) {
+            .search-example header button:hover ~ label, .search-example header button:focus ~ label {
+              top: -1.5rem;
+              left: 5px; } }
+      @media screen and (max-width: 800px) {
+        .search-example header button {
+          padding: .5em;
+          margin-left: -2.6rem; } }
     .search-example header .icon-search1 {
       color: #fff;
       font-size: 1.5rem; }
+      @media screen and (max-width: 800px) {
+        .search-example header .icon-search1 {
+          font-size: 1rem; } }

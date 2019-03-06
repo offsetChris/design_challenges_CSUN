@@ -1,5 +1,7 @@
 .search-example{
   font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+  position:relative;
+
   header{
     background-image:url('');
     background:$search-orange;
@@ -12,8 +14,17 @@
     h2{
       font-size:3rem;
       font-weight:300;
+      text-align:center;
     }
 
+    .search{
+      position:relative;
+    }
+
+    label{
+      font-size:1rem;
+      width:4.2rem;
+    }
     input{
       transition:border .25s;
       font-family:'Quicksand', Helvetica, Arial, sans-serif;
@@ -27,11 +38,16 @@
       color:#fff;
       border-bottom:2px solid #fff;
       width:400px;
-      padding:20px 100px 20px 20px;
+      padding:20px 4rem 20px 20px;
 
+    
       &::placeholder{
         color:#fff;
       }
+      &::-ms-input-placeholder{
+        color:#fff;
+      }
+
 
       &:focus{
         border-bottom-width:10px;
@@ -39,12 +55,31 @@
         outline-offset:-1px;
         // outline-color:-webkit-focus-ring-color;
         outline-color:rgba(255,255,255,.5);
+
+        ~ label {
+          line-height:normal;
+          // width:auto;
+          height:auto;
+          clip: auto;
+          left:-4.2rem;
+          top:1.5rem;
+
+          @media #{$phone}{
+            top:-1.5rem;
+            left:5px;
+          }
+        }
+      }
+
+      @media #{$phone}{
+        width:230px;
+        padding-right:2.5rem;
       }
     }
 
     button{
       margin-left:-4rem;
-      padding:1rem;
+      padding:1em;
       background:none;
       cursor:pointer;
       border:none;
@@ -57,6 +92,24 @@
         .icon-search1{
           color:$search-orange;
         }
+
+        ~ label {
+          line-height:normal;
+          // width:auto;
+          height:auto;
+          clip: auto;
+          left:-4.2rem;
+          top:1.5rem;
+          @media #{$phone}{
+            top:-1.5rem;
+            left:5px;
+          }
+        }
+      }
+
+      @media #{$phone}{
+        padding:.5em;
+        margin-left:-2.6rem;
       }
     }
 
@@ -64,6 +117,9 @@
       color:#fff;
       font-size:1.5rem;
       
+      @media #{$phone}{
+        font-size:1rem;
+      }
     }
 
   }
