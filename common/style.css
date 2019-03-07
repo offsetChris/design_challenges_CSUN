@@ -111,8 +111,8 @@ h1 {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?rnkjya");
-  src: url("fonts/icomoon.eot?rnkjya#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?rnkjya") format("truetype"), url("fonts/icomoon.woff?rnkjya") format("woff"), url("fonts/icomoon.svg?rnkjya#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?gjvlh8");
+  src: url("fonts/icomoon.eot?gjvlh8#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?gjvlh8") format("truetype"), url("fonts/icomoon.woff?gjvlh8") format("woff"), url("fonts/icomoon.svg?gjvlh8#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -129,6 +129,9 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-alert-circle:before {
+  content: "\e903"; }
+
 .icon-arrow-right:before {
   content: "\e900"; }
 
@@ -140,6 +143,9 @@ h1 {
 
 .icon-search:before {
   content: "\f002"; }
+
+.icon-exclamation-circle:before {
+  content: "\f06a"; }
 
 .icon-shopping-cart:before {
   content: "\f07a"; }
@@ -278,8 +284,8 @@ footer {
     .search-example header .search {
       position: relative; }
     .search-example header label {
-      font-size: 1rem;
-      width: 4.2rem; }
+      font-size: 1.2rem;
+      width: 4.6rem; }
     .search-example header input {
       transition: border .25s;
       font-family: 'Quicksand', Helvetica, Arial, sans-serif;
@@ -307,7 +313,7 @@ footer {
           line-height: normal;
           height: auto;
           clip: auto;
-          left: -4.2rem;
+          left: -4.6rem;
           top: 1.5rem; }
           @media screen and (max-width: 800px) {
             .search-example header input:focus ~ label {
@@ -520,3 +526,163 @@ footer {
         margin-left: 10px; }
         .cart_example .product .product_price .price.strike-through {
           font-weight: 300; }
+
+.form_example {
+  background: #6d145e;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #6d145e 0%, #6d145e 45%, #228472 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #6d145e 0%, #6d145e 45%, #228472 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #6d145e 0%, #6d145e 45%, #228472 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d145e', endColorstr='#228472',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  font-family: 'Hind', Helvetica, Arial, sans-serif;
+  padding: 2em 4em;
+  font-size: 1.5rem; }
+  @media screen and (max-width: 800px) {
+    .form_example {
+      padding: 20px; } }
+  .form_example h2 {
+    text-align: center;
+    color: #fff; }
+  .form_example .error-message {
+    position: absolute;
+    right: -2em;
+    bottom: 0px; }
+    .form_example .error-message button {
+      border: 0px;
+      background: 0px;
+      -webkit-appearance: none;
+      font-size: 1.5em;
+      line-height: 1.7em;
+      color: red; }
+    .form_example .error-message span {
+      line-height: 0px;
+      font-size: 0px;
+      width: 1px;
+      height: 1px;
+      clip: rect(0, 0, 0, 0); }
+  .form_example form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    color: #6d145e;
+    padding: 30px; }
+  .form_example .form-item {
+    margin: 1em;
+    position: relative; }
+    .form_example .form-item > label, .form_example .form-item legend {
+      display: block;
+      font-weight: 300;
+      font-size: 01em; }
+    .form_example .form-item textarea {
+      -webkit-appearance: none;
+      resize: vertical; }
+    .form_example .form-item > input, .form_example .form-item textarea {
+      padding: .5em;
+      background: transparent;
+      border: 2px solid #6d145e;
+      font-weight: 300;
+      font-family: 'Hind', Helvetica, Arial, sans-serif;
+      color: #6d145e;
+      font-size: 1em;
+      min-width: 400px;
+      border-radius: 2px; }
+      @media screen and (max-width: 800px) {
+        .form_example .form-item > input, .form_example .form-item textarea {
+          min-width: auto; } }
+      .form_example .form-item > input::placeholder, .form_example .form-item textarea::placeholder {
+        color: #6d145e; }
+      .form_example .form-item > input::-ms-input-placeholder, .form_example .form-item textarea::-ms-input-placeholder {
+        color: #6d145e; }
+  .form_example fieldset {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    clear: both; }
+    .form_example fieldset legend {
+      margin-bottom: 10px;
+      text-align: center; }
+      @media screen and (max-width: 800px) {
+        .form_example fieldset legend {
+          text-align: left; } }
+    .form_example fieldset .fieldset-item {
+      display: flex;
+      float: left;
+      margin: 10px 0px; }
+      @media screen and (max-width: 800px) {
+        .form_example fieldset .fieldset-item {
+          float: none;
+          clear: both; } }
+    .form_example fieldset input[type=radio], .form_example fieldset input[type=checkbox] {
+      height: 1.7rem;
+      width: 1.7rem;
+      box-sizing: content-box;
+      margin: 0px;
+      border: 2px solid #6d145e;
+      opacity: 0;
+      position: absolute;
+      z-index: 99; }
+      .form_example fieldset input[type=radio] + .custom-radio, .form_example fieldset input[type=radio] + .custom-checkbox, .form_example fieldset input[type=checkbox] + .custom-radio, .form_example fieldset input[type=checkbox] + .custom-checkbox {
+        display: block;
+        box-sizing: border-box;
+        height: 1em;
+        width: 1em;
+        border: 2px solid #6d145e;
+        margin-right: 10px;
+        text-align: center;
+        border-radius: 2px; }
+      .form_example fieldset input[type=radio] + .custom-radio, .form_example fieldset input[type=checkbox] + .custom-radio {
+        border-radius: 50%; }
+      .form_example fieldset input[type=radio]:hover + .custom-radio,
+      .form_example fieldset input[type=radio]:focus + .custom-radio,
+      .form_example fieldset input[type=radio]:hover _ .custom-checkbox,
+      .form_example fieldset input[type=radio]:focus + .custom-checkbox, .form_example fieldset input[type=checkbox]:hover + .custom-radio,
+      .form_example fieldset input[type=checkbox]:focus + .custom-radio,
+      .form_example fieldset input[type=checkbox]:hover _ .custom-checkbox,
+      .form_example fieldset input[type=checkbox]:focus + .custom-checkbox {
+        background: rgba(255, 255, 255, 0.2); }
+      .form_example fieldset input[type=radio]:checked + .custom-radio:before, .form_example fieldset input[type=checkbox]:checked + .custom-radio:before {
+        content: '';
+        width: 60%;
+        height: 60%;
+        background: #6d145e;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-top: 20%; }
+      .form_example fieldset input[type=radio]:checked + .custom-checkbox:before, .form_example fieldset input[type=checkbox]:checked + .custom-checkbox:before {
+        font-family: "icomoon" !important;
+        content: '\e902';
+        font-size: .8em;
+        line-height: 1em;
+        color: #6d145e;
+        display: block;
+        position: relative; }
+      .form_example fieldset input[type=radio] ~ label, .form_example fieldset input[type=checkbox] ~ label {
+        margin-right: 1em; }
+  .form_example input[type=submit] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    border: 1px solid #6d145e;
+    margin: 20px 0px;
+    color: #6d145e;
+    background: rgba(255, 255, 255, 0.1);
+    padding: .5em 2em;
+    font-size: 1.2em;
+    font-family: 'Hind', Helvetica, Arial, sans-serif;
+    border-radius: 5px; }
+    .form_example input[type=submit]:hover, .form_example input[type=submit]:focus {
+      background: #6d145e;
+      color: #fff; }
+  .form_example .thanks {
+    display: none;
+    text-align: center;
+    min-height: 800px;
+    color: #fff; }
