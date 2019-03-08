@@ -85,7 +85,7 @@ h1 {
     .columns, .columns--equal {
       flex-direction: column; } }
 
-.button, .button-secondary, .button-primary-secondary, .button-primary {
+.button, .button-secondary, .button-primary-secondary, .main-nav ul li.is-active, .button-primary {
   text-decoration: none;
   text-align: center;
   background-color: #0e38b1;
@@ -101,7 +101,7 @@ h1 {
   border-radius: 2px;
   -webkit-box-shadow: 0 2px 4px rgba(40, 49, 66, 0.12), 0 1px 16px rgba(40, 49, 66, 0.02);
   box-shadow: 0 2px 4px rgba(40, 49, 66, 0.12), 0 1px 16px rgba(40, 49, 66, 0.02); }
-  .button:hover, .button-secondary:hover, .button-primary-secondary:hover, .button:focus, .button-secondary:focus, .button-primary-secondary:focus, .button-primary:hover, .button-primary:focus {
+  .button:hover, .button-secondary:hover, .button-primary-secondary:hover, .main-nav ul li.is-active:hover, .button:focus, .button-secondary:focus, .button-primary-secondary:focus, .main-nav ul li.is-active:focus, .button-primary:hover, .button-primary:focus {
     background-color: #13317b;
     color: #fff; }
   .button-secondary, .button-primary-secondary {
@@ -171,6 +171,39 @@ footer {
     background: #222;
     color: #fff;
     margin-top: 0px; }
+
+.main-nav .button-primary {
+  font-size: 2rem;
+  padding: 1rem 3rem; }
+
+.main-nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px auto; }
+  .main-nav ul li {
+    margin: 1rem;
+    position: relative; }
+    .main-nav ul li a {
+      height: 100%; }
+    .main-nav ul li.is-active {
+      background: #fff;
+      color: #0e38b1;
+      cursor: default; }
+      .main-nav ul li.is-active:hover, .main-nav ul li.is-active:focus {
+        background: #fff;
+        color: #0e38b1;
+        text-decoration: none; }
+      .main-nav ul li.is-active:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 15px 0px 15px;
+        border-color: #fff transparent transparent transparent;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        margin-left: -15px; }
 
 .main-content {
   background: #fff;
@@ -470,7 +503,9 @@ footer {
         height: 100%;
         padding: 0px 2rem;
         background: #3f9a17;
-        box-sizing: content-box; }
+        box-sizing: content-box;
+        text-indent: -999em;
+        line-height: 0px; }
     .cart_example .progress_content .form-item {
       display: block;
       position: relative;

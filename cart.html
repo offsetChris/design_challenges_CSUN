@@ -23,20 +23,20 @@
         <div class="progress">
           <h2 class="sr-only" id="progressBarLabel">Your Progress </h2>
           <div class="progress_bar">
-            <div aria-labelledby="progressBarLabel" class="progress_fill" style="width:25%"></div>
+            <div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-valuetext="25%"  class="progress_fill" style="width:25%">25%</div>
           </div>
-          <div class="progress-indicators">
-            <span class="progress_step is-complete"><span class="sr-only">1</span></span>
-            <span class="progress_step is-inprogress"><span class="sr-only">2</span></span>
-            <span class="progress_step is-disabled"><span class="sr-only">3</span></span>
-            <span class="progress_step is-disabled"><span class="sr-only">4</span></span>
+          <div class="progress-indicators" aria-hidden="true">
+            <span class="progress_step is-complete"></span>
+            <span class="progress_step is-inprogress"></span>
+            <span class="progress_step is-disabled"></span>
+            <span class="progress_step is-disabled"></span>
           </div>
     
           <ol class="progress-labels" role="navigation" aria-label="Breadcrumbs">
-            <li><button class="is-complete" aria-label="Step 1: Completed">Billing Address</button></li>
-            <li><button class="is-inprogress" aria-label="Step 2: In Progress">Shipping Address</button></li>
-            <li><button class="is-disabled" aria-label="Step 3: Not Started" disabled="disabled">Shipping Method</button></li>
-            <li><button class="is-disabled" aria-label="Step 4: Not Started" disabled="disabled">Review Order</button></li>
+            <li><button class="is-complete"><span class="sr-only">Step 1: </span>Billing Address<span class="sr-only"> Complete</span></button></li>
+            <li><button class="is-inprogress"><span class="sr-only">Step 2: </span>Shipping Address<span class="sr-only"> In Progress</span></button></li>
+            <li><button class="is-disabled" disabled="disabled"><span class="sr-only">Step 3: </span>Shipping Method<span class="sr-only"> Not Started</span></button></li>
+            <li><button class="is-disabled" disabled="disabled"><span class="sr-only">Step 4: </span>Review Order<span class="sr-only"> Not Started</span></button></li>
           </ol>
 
           <div class="progress_content">
