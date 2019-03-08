@@ -167,7 +167,7 @@
           // remove all old error messages
           $('.error-message, .error-button').remove();
           $('[aria-invalid="true"]').attr('aria-invalid', false);
-          // jQuery
+
           $('[aria-required="true"]').each(function(){
             // If required is a fieldset
             if($(this).is('fieldset')){
@@ -183,12 +183,8 @@
               if($(this).val() == ''){
                 $(this).attr('aria-invalid', true);
                 var txt = $(this).prev('label').text();
-                if(txt === 'Email'){
-                  $(this).parent().append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">Enter an '+txt+'</div>')
-                } else {
-                  $(this).parent().append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">Enter a '+txt+'</div>')
-                }
                 
+                $(this).parent().append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">'+txt+' field should not be blank</div>');
               }
             }
           });
@@ -204,31 +200,34 @@
             console.log('Send the form!!');
           }
 
-          // until if/else statement checking for valid and required
           e.preventDefault();
         });
 
         $(function() {
           $(document).on('focus', 'input', function() {
             if($(this).attr('type') === 'radio' || $(this).attr('type') === 'checkbox'){
-              console.log('radio/check hover');
+              $('.error-message').addClass('is-hidden');
               $(this).parents('fieldset').find('.error-message').removeClass('is-hidden');
             } else {
+              $('.error-message').addClass('is-hidden');
               $(this).nextAll('.error-message').removeClass('is-hidden');
-              console.log('hover');
             }
           }).on('focus mouseenter', '.error-button', function(){
+            $('.error-message').addClass('is-hidden');
             $(this).next('.error-message').removeClass('is-hidden');
           })
           .on('blur', 'input', function() {
-            console.log('blur');
             if($(this).attr('type') === 'radio' || $(this).attr('type') === 'checkbox'){
               $(this).parents('fieldset').find('.error-message').addClass('is-hidden');
             } else {
               $(this).nextAll('.error-message').addClass('is-hidden');
             }
           }).on('blur mouseleave', '.error-button', function(){
-            $(this).next('.error-message').addClass('is-hidden');
+            // $(this).next('.error-message').addClass('is-hidden');
+          }).on('mouseenter', '.error-message', function() {
+            $(this).removeClass('is-hidden');
+          }).on('mouseleave', '.error-message', function(){
+            $(this).addClass('is-hidden');
           });
         });
         
