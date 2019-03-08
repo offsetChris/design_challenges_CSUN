@@ -39,54 +39,50 @@
           <div class="form-item">
             <fieldset aria-required="true" aria-invalid="false">
               <legend>What product are you interested in?</legend>
-              <div class="fieldset-item">
-                <input type="checkbox" id="products1" name="products" value="product1">
-                <span class="custom-checkbox"></span>
-                <label for="products1">Product 1</label>
+              <div>
+                <div class="fieldset-item">
+                    <input type="checkbox" id="products1" name="products" value="product1">
+                    <span class="custom-checkbox"></span>
+                    <label for="products1">Product 1</label>
+                  </div>
+                  
+                  <div class="fieldset-item">
+                    <input type="checkbox" id="products2" name="products" value="product2">
+                    <span class="custom-checkbox"></span>
+                    <label for="products2">Product 2</label>
+                  </div>
+                  
+                  <div class="fieldset-item">
+                    <input type="checkbox" id="products3" name="products" value="product3">
+                    <span class="custom-checkbox"></span>
+                    <label for="products3">Product 3 </label>
+                  </div>
               </div>
-              
-              <div class="fieldset-item">
-                <input type="checkbox" id="products2" name="products" value="product2">
-                <span class="custom-checkbox"></span>
-                <label for="products2">Product 2</label>
-              </div>
-              
-              <div class="fieldset-item">
-                <input type="checkbox" id="products3" name="products" value="product3">
-                <span class="custom-checkbox"></span>
-                <label for="products3">Product 3 </label>
-              </div>
-              
             </fieldset>
           </div>
 
           <div class="form-item">
             <fieldset aria-required="true" aria-invalid="false">
               <legend>Do you want to be on our mailing list?</legend>
-              <div class="fieldset-item">
-                <input type="radio" name="mail" id="mail1" value="yes">
-                <span class="custom-radio"></span>
-                <label for="mail1">Yes</label>
+              <div>
+                <div class="fieldset-item">
+                    <input type="radio" name="mail" id="mail1" value="yes">
+                    <span class="custom-radio"></span>
+                    <label for="mail1">Yes</label>
+                  </div>
+                  
+                  <div class="fieldset-item">
+                    <input type="radio" name="mail" id="mail2" value="no">
+                    <span class="custom-radio"></span>
+                    <label for="mail2">No</label>
+                  </div>
+                  
+                  <div class="fieldset-item">
+                    <input type="radio" name="mail" id="mail3" value="never">
+                    <span class="custom-radio"></span>
+                    <label for="mail3">Never</label>
+                  </div>
               </div>
-              
-              <div class="fieldset-item">
-                <input type="radio" name="mail" id="mail2" value="no">
-                <span class="custom-radio"></span>
-                <label for="mail2">No</label>
-              </div>
-              
-              <div class="fieldset-item">
-                <input type="radio" name="mail" id="mail3" value="never">
-                <span class="custom-radio"></span>
-                <label for="mail3">Never</label>
-              </div>
-              
-              <div class="fieldset-item">
-                <input type="radio" name="mail" id="mail4" value="goaway">
-                <span class="custom-radio"></span>
-                <label for="mail4">Go Away</label>
-              </div>
-              
             </fieldset>
           </div>
           <div class="form-item">
@@ -106,59 +102,7 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 
-        <script>
-          var form = document.getElementsByTagName('form')[0];
-
-          form.addEventListener('submit', function(e) {
-            console.log('submitClicked');
-            // remove all old error messages
-            $('.error-message').remove();
-            $('[aria-invalid="true"]').attr('aria-invalid', false);
-            // jQuery
-            $('[aria-required="true"]').each(function(){
-              // If required is a fieldset
-              if($(this).is('fieldset')){
-                if(!$(this).find('input:checked').length > 0){
-                  $(this).attr('aria-invalid', true);
-                  $(this).append('<div role="alert" class="error-message"><button type="button" class="icon-alert-circle"></button><span>Please choose an option</span></div>');
-                } else {
-                  $(this).attr('aria-invalid', false);
-                }
-              }
-              // if required is an input or textarea
-              if($(this).is('input, textarea')){
-                if($(this).val() == ''){
-                  $(this).attr('aria-invalid', true);
-                  var txt = $(this).prev('label').text();
-                  if(txt === 'Email'){
-                    $(this).parent().append('<div role="alert" class="error-message"><button type="button" class="icon-alert-circle"></button><span>Enter an '+txt+'</span></div>')
-                  } else {
-                    $(this).parent().append('<div role="alert" class="error-message"><button type="button" class="icon-alert-circle"></button><span>Enter a '+txt+'</span></div>')
-                  }
-                  
-                }
-              }
-            });
-
-            if($('[aria-invalid="true"]').length > 0){
-              $('[aria-invalid="true"]').eq(0).focus();
-              console.log('Errors!');
-            } else {
-              // Success message, hide form
-              $('form').fadeOut(600);
-              window.scrollTo(0,0);
-              $('.thanks').delay(600).fadeIn(600);
-              console.log('Send the form!!')
-            }
-
-            // until if/else statement checking for valid and required
-            e.preventDefault();
-          });
-
-          $('document.body').on('mouseenter focus', '.error-message button', function() {
-            console.log('hover');
-          })
-        </script>
+        
       </div>
 
       
@@ -218,5 +162,65 @@
     </footer>
     
     <script src="common/script.js"></script>
+    <script>
+        var form = document.getElementsByTagName('form')[0];
+
+        form.addEventListener('submit', function(e) {
+          console.log('submitClicked');
+          // remove all old error messages
+          $('.error-message, .error-button').remove();
+          $('[aria-invalid="true"]').attr('aria-invalid', false);
+          // jQuery
+          $('[aria-required="true"]').each(function(){
+            // If required is a fieldset
+            if($(this).is('fieldset')){
+              if(!$(this).find('input:checked').length > 0){
+                $(this).attr('aria-invalid', true);
+                $(this).append('<button class="error-button icon-alert-circle" type="button"></button><div role="alert" aria-atomic="true" class="error-message is-hidden">Please choose an option</div>');
+              } else {
+                $(this).attr('aria-invalid', false);
+              }
+            }
+            // if required is an input or textarea
+            if($(this).is('input, textarea')){
+              if($(this).val() == ''){
+                $(this).attr('aria-invalid', true);
+                var txt = $(this).prev('label').text();
+                if(txt === 'Email'){
+                  $(this).parent().append('<button class="error-button icon-alert-circle" type="button"></button><div role="alert" aria-atomic="true" class="error-message is-hidden">Enter an '+txt+'</div>')
+                } else {
+                  $(this).parent().append('<button class="error-button icon-alert-circle" type="button"></button><div role="alert" aria-atomic="true" class="error-message is-hidden">Enter a '+txt+'</div>')
+                }
+                
+              }
+            }
+          });
+
+          if($('[aria-invalid="true"]').length > 0){
+            $('[aria-invalid="true"]').eq(0).focus();
+            console.log('Errors!');
+          } else {
+            // Success message, hide form
+            $('form').fadeOut(600);
+            window.scrollTo(0,0);
+            $('.thanks').delay(600).fadeIn(600);
+            console.log('Send the form!!')
+          }
+
+          // until if/else statement checking for valid and required
+          e.preventDefault();
+        });
+
+        $(function() {
+          $(document).on('mouseenter focus', '.error-button', function() {
+            console.log('hover');
+            $(this).next('.error-message').removeClass('is-hidden');
+          }).on('mouseleave blur', '.error-button', function() {
+            console.log('blur');
+            $(this).next('.error-message').addClass('is-hidden');
+          });
+        });
+        
+      </script>
   </body>
 </html>
