@@ -1,11 +1,17 @@
 .form_example{
   // background:#6d145e;
 
-  background: #6d145e; /* Old browsers */
-  background: -moz-linear-gradient(45deg, #6d145e 0%, #6d145e 45%, #228472 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #6d145e 0%,#6d145e 45%,#228472 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #6d145e 0%,#6d145e 45%,#228472 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d145e', endColorstr='#228472',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  // background: #6d145e; /* Old browsers */
+  // background: -moz-linear-gradient(45deg, #6d145e 0%, #6d145e 45%, #228472 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(45deg, #6d145e 0%,#6d145e 45%,#228472 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(45deg, #6d145e 0%,#6d145e 45%,#228472 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d145e', endColorstr='#228472',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background: #008289; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #008289 0%, #4ba87b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #008289 0%,#4ba87b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #008289 0%,#4ba87b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008289', endColorstr='#4ba87b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color:$white;
   font-family:'Hind', Helvetica, Arial, sans-serif;
   padding:2em 4em;
@@ -14,27 +20,47 @@
   @media #{$phone}{
     padding:20px;
   }
+
+  input:focus, button:focus{
+    outline:2px solid;
+    outline-offset:2px;
+    outline-color:$yellow;
+    // outline-color:-webkit-focus-ring-color;
+
+    &[type=checkbox] + .custom-checkbox, &[type=radio] + .custom-radio{
+      outline:2px solid;
+      outline-offset:2px;
+      outline-color:$yellow;
+    }
+  }
  
   h2{
     text-align:center;
   }
   .error-button{
-    border:0px;
-    background:0px;
-    -webkit-appearance:none;
-    font-size:1em;
     color:#fff;
-    background:#d41919;
+    background:$form-error;
     height:1.5em;
     width:1.5em;
     margin-right:-1.5em; // Negative margin prevents parent container width expansion
     text-align:center;
-    cursor:pointer;
     vertical-align:bottom;
     margin-left:-.25em;
+    display:inline-block;
+    -webkit-appearance:none;
+    border:none;
+    cursor:pointer;
+    font-size:1em;
+    position:relative;
+    z-index:2;
 
     &:hover, &:focus{
-      background:#b50000;
+      background:$form-error-hover;
+    }
+
+    &:before{
+      display:block;
+      line-height:1.4em;
     }
 
     @media #{$phone}{
@@ -45,7 +71,7 @@
     }
   }
   .error-message{
-    background:#b50000;
+    background:$form-error-hover;
     font-size:.6em;
     display:block;
     padding:5px 20px 5px 5px;
@@ -116,13 +142,13 @@
       border:1px solid $white;
       font-weight:300;
       font-family:'Hind', Helvetica, Arial, sans-serif;
-      color:#6d145e;
+      color:$form-bkg1;
       font-size:1em;
       min-width:400px;
       border-radius:2px;
 
       &[aria-invalid=true]{
-        border:1px solid #d41919;
+        border:1px solid $form-error;
       }
 
       @media #{$phone}{
@@ -131,10 +157,10 @@
       }
   
       &::placeholder{
-        color:rgba(255,255,255,.7);
+        color:rgba(0,130,137,.7);
       }
       &::-ms-input-placeholder{
-        color:rgba(255,255,255,.7);
+        color:rgba(0,130,137,.7);
       }
     }
   }
@@ -147,7 +173,7 @@
     padding-bottom:1.2em;
 
     &[aria-invalid=true]{
-      border:1px solid #d41919;
+      border:1px solid $form-error;
     }
     >div{
       display:flex;
@@ -201,7 +227,7 @@
 
       + .custom-radio, + .custom-checkbox{
         display:block;
-        box-sizing:border-box;
+        box-sizing:content-box;
         height:1em;
         width:1em;
         border:2px solid #fff;
@@ -227,7 +253,7 @@
           content:'';
           width:60%;
           height:60%;
-          background:#6d145e;
+          background:$form-bkg1;
           display:block;
           margin:0 auto;
           border-radius:50%;
@@ -240,8 +266,8 @@
           font-family:$icon-font;
           content:'\f00c';
           font-size:.8em;
-          line-height:1em;
-          color:#6d145e;
+          line-height:1.2em;
+          color:$form-bkg1;
           display:block;
           position:relative;
         }
@@ -267,7 +293,7 @@
 
     &:hover, &:focus{
       background:#fff;
-      color:#6d145e;
+      color:$form-bkg1;
     }
   }
 

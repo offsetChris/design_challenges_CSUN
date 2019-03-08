@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" contet="ID=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Robust, Semantic Solutions to Modern Design Challenges: Code Examples</title>
+    <title>Robust, Semantic Solutions to Modern Design Challenges: Form Example</title>
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="common/style.css">
   </head>
@@ -23,17 +23,17 @@
         <form>
           <div class="form-item">
             <label for="firstName">First Name</label>
-            <input name="firstName" id="firstName" aria-required="true" aria-invalid="false" placeholder="Enter your first name">
+            <input type="text" name="firstName" id="firstName" aria-required="true" aria-invalid="false" placeholder="Enter your first name">
           </div>
 
           <div class="form-item">
             <label for="lastName">Last Name</label>
-            <input name="lastName" id="lastName" aria-required="true" aria-invalid="false" placeholder="Enter your last name">
+            <input type="text" name="lastName" id="lastName" aria-required="true" aria-invalid="false" placeholder="Enter your last name">
           </div>
 
           <div class="form-item">
             <label for="email">Email</label>
-            <input name="email" id="email" aria-required="true" aria-invalid="false" placeholder="Enter your email">
+            <input type="text" name="email" id="email" aria-required="true" aria-invalid="false" placeholder="Enter your email">
           </div>
 
           <div class="form-item">
@@ -173,7 +173,7 @@
             if($(this).is('fieldset')){
               if(!$(this).find('input:checked').length > 0){
                 $(this).attr('aria-invalid', true);
-                $(this).append('<button class="error-button icon-alert-circle" type="button"></button><div role="alert" aria-atomic="true" class="error-message is-hidden">Please choose an option</div>');
+                $(this).append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">Please choose an option</div>');
               } else {
                 $(this).attr('aria-invalid', false);
               }
@@ -184,9 +184,9 @@
                 $(this).attr('aria-invalid', true);
                 var txt = $(this).prev('label').text();
                 if(txt === 'Email'){
-                  $(this).parent().append('<button class="error-button icon-alert-circle" type="button"></button><div role="alert" aria-atomic="true" class="error-message is-hidden">Enter an '+txt+'</div>')
+                  $(this).parent().append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">Enter an '+txt+'</div>')
                 } else {
-                  $(this).parent().append('<button class="error-button icon-alert-circle" type="button"></button><div role="alert" aria-atomic="true" class="error-message is-hidden">Enter a '+txt+'</div>')
+                  $(this).parent().append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">Enter a '+txt+'</div>')
                 }
                 
               }
@@ -201,7 +201,7 @@
             $('form').fadeOut(600);
             window.scrollTo(0,0);
             $('.thanks').delay(600).fadeIn(600);
-            console.log('Send the form!!')
+            console.log('Send the form!!');
           }
 
           // until if/else statement checking for valid and required
@@ -209,11 +209,25 @@
         });
 
         $(function() {
-          $(document).on('mouseenter focus', '.error-button', function() {
-            console.log('hover');
+          $(document).on('focus', 'input', function() {
+            if($(this).attr('type') === 'radio' || $(this).attr('type') === 'checkbox'){
+              console.log('radio/check hover');
+              $(this).parents('fieldset').find('.error-message').removeClass('is-hidden');
+            } else {
+              $(this).nextAll('.error-message').removeClass('is-hidden');
+              console.log('hover');
+            }
+          }).on('focus mouseenter', '.error-button', function(){
             $(this).next('.error-message').removeClass('is-hidden');
-          }).on('mouseleave blur', '.error-button', function() {
+          })
+          .on('blur', 'input', function() {
             console.log('blur');
+            if($(this).attr('type') === 'radio' || $(this).attr('type') === 'checkbox'){
+              $(this).parents('fieldset').find('.error-message').addClass('is-hidden');
+            } else {
+              $(this).nextAll('.error-message').addClass('is-hidden');
+            }
+          }).on('blur mouseleave', '.error-button', function(){
             $(this).next('.error-message').addClass('is-hidden');
           });
         });
