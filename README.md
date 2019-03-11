@@ -25,12 +25,6 @@ Demo: https://offsetchris.github.io/design_challenges_CSUN/
   * Open your browser to localhost:8080 and you should see the index file.
 
 
-TODO!!
-- [ ] Pull blogpost css into more consise scss file. Components etc getting annoying showcasing different brands
-- [ ] Back buttons, nav through slides
-- [ ] Home button to get back to index
-
-
 
 Sass naming note:
 "Bits & Pieces Put Together to Present a Semblance of a Whole"
