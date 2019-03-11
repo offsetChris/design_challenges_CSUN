@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" contet="ID=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Robust, Semantic Solutions to Modern Design Challenges: Code Examples</title>
-    <link rel="stylesheet" href="common/style.css">
+    <title>Robust, Semantic Solutions to Modern Design Challenges: Search Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../common/style.css">
   </head>
   <body class="example-page">
     <nav aria-label="Skip link">
@@ -13,33 +14,71 @@
     </nav>
     
     <header class="site-container">
-      <h1>Mega Nav Example</h1>
+      <h1>Search Field Example</h1>
     </header>
 
     <main class="site-container main-content" id="mainContent">
-      <div class="cart">
-
+      <div class="search-example">
+          <header>
+            <h2>All the things</h2>
+            <div>
+              <form action="/searchResults" method="GET">
+                <div class="search">
+                  
+                  <input type="text" id="siteSearch" placeholder="Enter your search text" >
+                  <button type="submit">
+                    <span class="icon-search1"></span>
+                    <span class="sr-only">Submit Search</span>
+                  </button>
+                  <label for="siteSearch" class="sr-only">Search:</label>
+                </div>
+              </form>
+            </div>
+          </header>
       </div>
 
-    </main>
+      
 <!-- Indent formatting below is pushed all the way to the left to display correctly in textarea -->
 <section aria-label="Code for Cart Example">
-  <h3>Code for the Mega Nav Example</h3>
+  <h3>Code for the search example</h3>
 <pre>
 <code>
+&lt;form action="/searchResults" method="GET">
+  &lt;div class="search">  
+    &lt;input type="text" id="siteSearch" placeholder="Search" >
 
+    &lt;button type="submit">
+      &lt;span class="icon-search1">&lt;/span>
+      &lt;span class="sr-only">Submit Search&lt;/span>
+    &lt;/button>
+
+    &lt;label for="siteSearch" class="sr-only">Search:&lt;/label>
+  &lt;/div>
+&lt;/form>
+
+
+<strong>CSS focus styling</strong>
+input:focus ~ label{
+  // show the label
+}
+button + label{
+  // show the label
+}
 </code>
 </pre>
 </section>
-    
+      <div class="slide-buttons">
+        <a href="../slides/07.html" id="backButton" class="button-primary">< Back</a>
+        <a href="../index.html" id="homeButton" class="button-secondary">Home</a>
+        <a href="../slides/08.html" id="nextButton" class="button-primary">Next ></a>
+      </div>
+    </main>
 
   <footer>
-      <span class="si-logo">
+    <div class="si-logo">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 583.7 80.7" style="enable-background:new 0 0 583.7 80.7;" xml:space="preserve">
-        <style type="text/css">
-          .st0{fill:#FFFFFF;}
-        </style>
+        
         <path class="st0" d="M33.7,1.5C15.1,1.5,0,16.7,0,35.3C0,53.9,15.1,69,33.7,69c18.6,0,33.7-15.1,33.7-33.7
           C67.5,16.7,52.3,1.5,33.7,1.5z M54,45.5C50.3,52.9,42.6,58,33.7,58C21.2,58,11,47.8,11,35.3s10.2-22.7,22.7-22.7
           c12.1,0,22.1,9.6,22.7,21.6C42.3,44.3,30.6,25,17.1,32C32.9,27.3,38.3,50.8,54,45.5z"/>
@@ -74,7 +113,7 @@
             C556.5,29.5,551.3,32.2,549.9,37.8z"/>
         </g>
       </svg>
-    </span>
+    </div>
   </footer>
     
     <script src="common/script.js"></script>

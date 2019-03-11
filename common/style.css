@@ -2,12 +2,13 @@
   display: block; }
   .si-logo svg {
     display: block;
-    position: relative; }
+    position: relative;
+    fill: #3c485e; }
   footer .si-logo {
-    width: 400px;
+    width: 200px;
     margin: 3rem; }
-    footer .si-logo svg {
-      fill: #3c485e; }
+  .main-title .si-logo {
+    width: 300px; }
 
 * {
   box-sizing: border-box; }
@@ -52,6 +53,9 @@ h1 {
     margin-bottom: .15rem;
     background: #0bbcd6; }
 
+pre {
+  font-size: 1.5rem; }
+
 .sr-only {
   position: absolute;
   left: -9999em;
@@ -80,6 +84,7 @@ h1 {
   display: flex;
   flex-direction: row; }
   .columns--equal > div {
+    margin-right: 20px;
     flex-basis: 50%; }
   @media screen and (max-width: 800px) {
     .columns, .columns--equal {
@@ -108,6 +113,9 @@ h1 {
     background-color: transparent;
     color: #0e38b1;
     border: 1px solid #0e38b1; }
+  .button.is-disabled, .is-disabled.button-secondary, .is-disabled.button-primary-secondary, .main-nav ul li.is-disabled.is-active, .button-primary.is-disabled {
+    background: #f4f4f4;
+    color: #444; }
 
 @font-face {
   font-family: 'icomoon';
@@ -157,7 +165,37 @@ h1 {
   content: "\ea3c"; }
 
 footer {
-  display: flex; }
+  display: flex;
+  flex-direction: row-reverse; }
+
+.slide-buttons {
+  margin: 20px 10%;
+  display: flex;
+  justify-content: space-between; }
+
+.slide {
+  min-height: 70vh;
+  margin: 0px 2%;
+  position: relative; }
+  .slide h2 {
+    font-size: 2.2em; }
+  .slide p, .slide li, .slide strong, .slide em {
+    font-size: 1.5rem; }
+  .slide li {
+    margin: 1rem 0px; }
+  .slide .flex-image img {
+    width: 100%;
+    display: block; }
+  .slide .overlay-text, .slide .overlay-text--right, .slide .overlay-text--left {
+    background: #fff;
+    padding: 20px;
+    font-size: 1rem; }
+    .slide .overlay-text ul, .slide .overlay-text--right ul, .slide .overlay-text--left ul {
+      padding: 0px 10px; }
+    .slide .overlay-text li, .slide .overlay-text--right li, .slide .overlay-text--left li, .slide .overlay-text strong, .slide .overlay-text--right strong, .slide .overlay-text--left strong, .slide .overlay-text p, .slide .overlay-text--right p, .slide .overlay-text--left p {
+      font-size: 1rem; }
+  .slide .highlight {
+    background: rgba(241, 209, 87, 0.5); }
 
 .skip-link {
   color: #fff;
@@ -281,7 +319,7 @@ footer {
       background: #003471; }
     .blog .blog_category.chickens {
       color: #fff;
-      background: #387712; }
+      background: #2b5810; }
   .blog .blog_date {
     margin: 1rem 2rem;
     font-size: .8rem;
@@ -289,6 +327,18 @@ footer {
   .blog .blog_text {
     color: #3c485e;
     margin: 1rem 2rem; }
+
+.main-title .si-logo {
+  margin: 80px auto 0px auto; }
+
+.main-title .title-indent {
+  margin: 30px 50px; }
+
+.main-title .big-text {
+  font-size: 1.5em; }
+
+.main-title .main-content {
+  margin: 30px; }
 
 .example-page .main-nav {
   margin: 0px;
@@ -378,7 +428,7 @@ footer {
           line-height: normal;
           height: auto;
           clip: auto;
-          left: -4.2rem;
+          left: -4.6rem;
           top: 1.5rem; }
           @media screen and (max-width: 800px) {
             .search-example header button:hover ~ label, .search-example header button:focus ~ label {
@@ -397,7 +447,6 @@ footer {
 
 .cart_example {
   font-family: 'Quicksand', Helvetica, Arial, sans-serif;
-  min-height: 50vh;
   margin-bottom: 80px; }
   .cart_example .progress {
     max-width: 80%;
@@ -481,7 +530,7 @@ footer {
       .cart_example .progress_step.is-disabled {
         border-color: #bdbdbd;
         background: #f4f4f4; }
-    .cart_example .progress_bar {
+    .cart_example .progress-bar {
       background: #f4f4f4;
       height: .8rem;
       margin-top: .6rem;
@@ -495,9 +544,9 @@ footer {
       border: 1px solid #d8d8d8;
       border-radius: 5px; }
       @media screen and (max-width: 800px) {
-        .cart_example .progress_bar {
+        .cart_example .progress-bar {
           display: none; } }
-      .cart_example .progress_bar .progress_fill {
+      .cart_example .progress-bar .progress_fill {
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
         border-top-right-radius: 0px;
@@ -508,24 +557,24 @@ footer {
         box-sizing: content-box;
         text-indent: -999em;
         line-height: 0px; }
-    .cart_example .progress_content .form-item {
+    .cart_example .progress-content .form-item {
       display: block;
       position: relative;
       margin: 10px; }
-      .cart_example .progress_content .form-item label {
+      .cart_example .progress-content .form-item label {
         display: block;
         font-size: .8em;
         font-weight: 400; }
-      .cart_example .progress_content .form-item input {
+      .cart_example .progress-content .form-item input {
         font-size: 1rem;
         padding: .5rem;
         font-family: 'Quicksand', Helvetica, Arial, sans-serif;
         min-width: 350px; }
         @media screen and (max-width: 800px) {
-          .cart_example .progress_content .form-item input {
+          .cart_example .progress-content .form-item input {
             min-width: auto;
             width: 100%; } }
-    .cart_example .progress_content .product_summary {
+    .cart_example .progress-content .product_summary {
       margin-left: auto;
       padding: 20px;
       background: #f4f4f4;
@@ -534,19 +583,19 @@ footer {
       width: 50%;
       margin-top: 20px;
       font-size: .8em; }
-      .cart_example .progress_content .product_summary ol li {
+      .cart_example .progress-content .product_summary ol li {
         margin: 20px 0px; }
       @media screen and (max-width: 800px) {
-        .cart_example .progress_content .product_summary {
+        .cart_example .progress-content .product_summary {
           width: 100%;
           margin-left: 0px; } }
-      .cart_example .progress_content .product_summary_total {
+      .cart_example .progress-content .product_summary_total {
         font-size: .8em;
         margin: 30px 0px;
         padding: 20px;
         text-align: right;
         border-top: 1px solid #ccc; }
-        .cart_example .progress_content .product_summary_total h4 {
+        .cart_example .progress-content .product_summary_total h4 {
           margin: 0px; }
   .cart_example .product {
     display: flex; }

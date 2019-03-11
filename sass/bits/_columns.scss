@@ -5,6 +5,7 @@
   &--equal{
     @extend .columns;
     > div{
+      margin-right:20px;
       flex-basis:50%;
     }
   }

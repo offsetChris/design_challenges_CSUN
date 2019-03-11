@@ -1,0 +1,43 @@
+.slide{
+  min-height:70vh;
+  margin:0px 2%;
+  position:relative;
+  h2{
+    font-size:2.2em;
+  }
+  p, li, strong, em{
+    font-size:1.5rem;
+  }
+
+ li{
+   margin:1rem 0px;
+ }
+ .flex-image img{
+    width:100%;
+    display:block;
+ }
+ .overlay-text{
+    background:#fff;
+    padding:20px;
+    font-size:1rem;
+
+    &--right{
+      @extend .overlay-text;
+
+    }
+    &--left{
+      @extend .overlay-text;
+
+    }
+    ul{
+      padding:0px 10px;
+    }
+    li, strong, p{
+      font-size:1rem;
+    }
+ }  
+
+ .highlight{
+   background:rgba(241, 209, 87, .5)
+ }
+}

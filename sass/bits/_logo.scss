@@ -4,12 +4,14 @@
   svg{
     display:block;
     position:relative;
+    fill:$base-blue;
   }
   footer &{
-    width:400px;
+    width:200px;
     margin:3rem;
-    svg{
-      fill:$base-blue;
-    }
+  }
+
+  .main-title &{
+    width:300px;
   }
 }

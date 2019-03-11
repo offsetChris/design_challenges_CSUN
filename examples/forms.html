@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Robust, Semantic Solutions to Modern Design Challenges: Form Example</title>
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="common/style.css">
+    <link rel="stylesheet" href="../common/style.css">
   </head>
   <body class="example-page">
     <nav aria-label="Skip link">
@@ -92,29 +92,49 @@
           <input type="submit" value="Create Account">
         </form>
 
-        <div class="thanks" role="alert" aria-atomic="true">
+        <div class="thanks">
           <h3>Thank you! </h3>
           <p>Your account has been created. Good Job.</p>
         </div>
-
-        <script
-        src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
-
-        
       </div>
 
       
 <!-- Indent formatting below is pushed all the way to the left to display correctly in textarea -->
-<section aria-label="Code for Cart Example">
+<section aria-label="Code for Form Example">
   <h3>Code for the Form Example</h3>
 <pre>
 <code>
+&lt;div class="form-item">
+  &lt;label for="firstName">First Name&lt;/label>
+  &lt;input type="text" name="firstName" id="firstName" aria-required="true" aria-invalid="true" 
+    placeholder="Enter your first name">
+  &lt;button type="button" aria-hidden="true">&lt;/button>
+  &lt;div class="error-message">First Name field shoud not be blank&lt;/div>
+&lt;/div>
 
+&lt;div class="form-item">
+  &lt;fieldset aria-required="true" aria-invalid="false">
+    &lt;legend>What product are you interested in?&lt;/legend>
+    &lt;div>
+      &lt;div class="fieldset-item">
+          &lt;input type="checkbox" id="products1" name="products" value="product1">
+          &lt;span class="custom-checkbox">&lt;/span>
+          &lt;label for="products1">Product 1&lt;/label>
+      &lt;/div>
+      ...
+    &lt;/div>
+    &lt;button type="button" aria-hidden="true">&lt;/button>
+    &lt;div class="error-message">Please choose an option&lt;/div>
+  &lt;/fieldset>
+&lt;/div>
 </code>
 </pre>
 </section>
+      <div class="slide-buttons">
+        <a href="../slides/06.html" id="backButton" class="button-primary">< Back</a>
+        <a href="../index.html" id="homeButton" class="button-secondary">Home</a>
+        <a href="../slides/07.html" id="nextButton" class="button-primary">Next ></a>
+      </div>
     </main>
 
     <footer>
@@ -157,8 +177,10 @@
         </svg>
         </span>
     </footer>
-    
-    <script src="common/script.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
     <script>
         var form = document.getElementsByTagName('form')[0];
 
@@ -173,7 +195,7 @@
             if($(this).is('fieldset')){
               if(!$(this).find('input:checked').length > 0){
                 $(this).attr('aria-invalid', true);
-                $(this).append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">Please choose an option</div>');
+                $(this).append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true" tabindex="-1"></button><div class="error-message is-hidden">Please choose an option</div>');
               } else {
                 $(this).attr('aria-invalid', false);
               }
@@ -184,7 +206,7 @@
                 $(this).attr('aria-invalid', true);
                 var txt = $(this).prev('label').text();
                 
-                $(this).parent().append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true"></button><div class="error-message is-hidden">'+txt+' field should not be blank</div>');
+                $(this).parent().append('<button type="button" class="error-button icon-alert-circle" aria-hidden="true" tabindex="-1"></button><div class="error-message is-hidden">'+txt+' field should not be blank</div>');
               }
             }
           });

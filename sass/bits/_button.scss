@@ -24,4 +24,9 @@
     color:$cobalt;
     border:1px solid $cobalt;
   }
+
+  &.is-disabled{
+    background:$grey;
+    color:#444;
+  }
 }

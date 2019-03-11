@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Robust, Semantic Solutions to Modern Design Challenges: Shopping Cart Example</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="common/style.css">
+    <link rel="stylesheet" href="../common/style.css">
   </head>
   <body class="example-page">
     <nav aria-label="Skip link">
@@ -14,15 +14,14 @@
     </nav>
     
     <header class="site-container">
-      <h1>Shopping Cart Example</h1>
+      <h1>Shopping Cart &ndash; Live Example</h1>
     </header>
 
-    <!-- TABS TO ACCORDION PATTERN???? -->
     <main class="site-container main-content" id="mainContent">
       <div class="cart_example">
         <div class="progress">
           <h2 class="sr-only" id="progressBarLabel">Your Progress </h2>
-          <div class="progress_bar">
+          <div class="progress-bar">
             <div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-valuetext="25%"  class="progress_fill" style="width:25%">25%</div>
           </div>
           <div class="progress-indicators" aria-hidden="true">
@@ -39,7 +38,7 @@
             <li><button class="is-disabled" disabled="disabled"><span class="sr-only">Step 4: </span>Review Order<span class="sr-only"> Not Started</span></button></li>
           </ol>
 
-          <div class="progress_content">
+          <div class="progress-content">
             <h3>Shipping Address</h3>
             <div class="columns">
               <div>
@@ -66,7 +65,7 @@
               </div>
 
               <div class="product_summary">
-                <p>Your order:</p>
+                <h3>Your order:</h3>
                 <ol>
                   <li class="product">
                     <img>
@@ -75,8 +74,8 @@
                       <span class="product_name">Product Name</span>
                     </span>
                     <span class="product_price">
-                      <span class="price strike-through"><span class="sr-only">Original Price:</span>$22.99</span>
-                      <span class="price"><span class="sr-only">Today's Price:</span>$59.99</span>
+                      <span class="price strike-through"><span class="sr-only">Original Price:</span> $22.99</span>
+                      <span class="price"><span class="sr-only">Today's Price:</span> $59.99</span>
                     </span>
                   </li>
                 </ol>
@@ -96,14 +95,23 @@
 
       
 <!-- Indent formatting below is pushed all the way to the left to display correctly in textarea -->
-<section aria-label="Code for Cart Example">
-  <h3>Code for the Cart Example</h3>
+<section aria-label="Code for Shopping Cart Example">
+  <h3>Code for the Crossed-out Price Example</h3>
 <pre>
 <code>
+&lt;span class="product_price">
+  &lt;span class="price strike-through">&lt;span class="sr-only">Original Price:&lt;/span> $22.99&lt;/span>
+  &lt;span class="price">&lt;span class="sr-only">Today's Price:&lt;/span> $59.99&lt;/span>
+&lt;/span>
 
 </code>
 </pre>
 </section>
+      <div class="slide-buttons">
+        <a href="../slides/05.html" id="backButton" class="button-primary">< Back</a>
+        <a href="../index.html" id="homeButton" class="button-secondary">Home</a>
+        <a href="../slides/06.html" id="nextButton" class="button-primary">Next ></a>
+      </div>
     </main>
 
     <footer>
@@ -146,7 +154,5 @@
         </svg>
       </div>
     </footer>
-    
-    <script src="common/script.js"></script>
   </body>
 </html>

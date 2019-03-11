@@ -1,6 +1,6 @@
 .cart_example{
   font-family: 'Quicksand', Helvetica, Arial, sans-serif;
-  min-height:50vh;
+  // min-height:50vh;
   margin-bottom:80px;
 
   .progress{
@@ -132,7 +132,7 @@
       }
     }
 
-    &_bar{
+    &-bar{
       background:$grey;
       height:.8rem;
       margin-top:.6rem;
@@ -165,7 +165,7 @@
 
     }
 
-    &_content{
+    &-content{
       .form-item{
         display: block;
         position:relative;
