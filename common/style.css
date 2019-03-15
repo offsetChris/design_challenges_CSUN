@@ -67,6 +67,9 @@ pre {
 .strike-through {
   text-decoration: line-through; }
 
+.highlight {
+  background: rgba(241, 209, 87, 0.5); }
+
 .site-container {
   max-width: 1300px;
   margin: 3rem auto;
@@ -194,8 +197,6 @@ footer {
       padding: 0px 10px; }
     .slide .overlay-text li, .slide .overlay-text--right li, .slide .overlay-text--left li, .slide .overlay-text strong, .slide .overlay-text--right strong, .slide .overlay-text--left strong, .slide .overlay-text p, .slide .overlay-text--right p, .slide .overlay-text--left p {
       font-size: 1rem; }
-  .slide .highlight {
-    background: rgba(241, 209, 87, 0.5); }
 
 .skip-link {
   color: #fff;

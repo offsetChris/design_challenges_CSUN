@@ -108,7 +108,7 @@
   &lt;label for="firstName">First Name&lt;/label>
   &lt;input type="text" name="firstName" id="firstName" aria-required="true" aria-invalid="true" 
     placeholder="Enter your first name">
-  &lt;button type="button" aria-hidden="true">&lt;/button>
+  &lt;button type="button" aria-hidden="true" tabindex="-1">&lt;/button>
   &lt;div class="error-message">First Name field shoud not be blank&lt;/div>
 &lt;/div>
 
@@ -123,8 +123,8 @@
       &lt;/div>
       ...
     &lt;/div>
-    &lt;button type="button" aria-hidden="true">&lt;/button>
-    &lt;div class="error-message">Please choose an option&lt;/div>
+   <span class="highlight"> &lt;button type="button" aria-hidden="true">&lt;/button>
+    &lt;div class="error-message">Please choose an option&lt;/div></span> 
   &lt;/fieldset>
 &lt;/div>
 </code>
